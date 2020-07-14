@@ -70,8 +70,8 @@ finfo(const char *p)
 	c = gettypechar(&st) ;
 	a =  0777 & st.st_mode ;
 	pwu = getpwuid(st.st_uid) ;
-	printf("%s %c %04o %s\n",
-		p, c, a, pwu->pw_name);
+	printf("%s %c %04o %s %u\n",
+		p, c, a, pwu->pw_name, st.st_size);
 }
 
 main(int argc, char *argv[])
