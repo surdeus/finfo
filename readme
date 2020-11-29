@@ -1,2 +1,4 @@
-# finfo
-*finfo* - get the file information in "ls -l" format but simpler.
+finfo
+=====
+finfo - get the file information in "ls -l" format but way simpler.
+

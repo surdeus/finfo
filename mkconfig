@@ -1,13 +1,10 @@
 CC = tcc
 LD = $CC
-
 NAME = finfo
-
-ROOT = $HOME/local
-BIN = $ROOT/bin
-SHARE = $ROOT/share
-MAN = $SHARE/man/
-
+EXE = $HOME/exe
+SHR = $ROOT/shr
+MAN = $SHARE/man
 CPPFLAGS =
 CFLAGS = $CPPFLAGS
-LDFLAGS = -static
+LDFLAGS = $LD_STATIC_FLAG
+
