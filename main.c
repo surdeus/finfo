@@ -74,6 +74,7 @@ finfo(const char *p)
 		p, c, a, pwu->pw_name, st.st_size);
 }
 
+int
 main(int argc, char *argv[])
 {
 	char buf[BUFSIZ];
@@ -89,5 +90,5 @@ main(int argc, char *argv[])
 	else
 		for(i=1;i<argc;++i)
 			finfo(argv[i]);
-	exit(0);
+	return 0 ;
 }
