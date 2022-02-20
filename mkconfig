@@ -1,10 +1,4 @@
-CC = tcc
-LD = $CC
-NAME = finfo
-EXE = $HOME/exe
-SHR = $ROOT/shr
-MAN = $SHARE/man
-CPPFLAGS =
-CFLAGS = $CPPFLAGS
-LDFLAGS = $LD_STATIC_FLAG
+<$MKINCDIR/config
+PROGNAME = finfo
+CFILES = main.c
 
