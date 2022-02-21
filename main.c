@@ -9,6 +9,7 @@
 #include <unistd.h>
 
 #include <pwd.h>
+#include <grp.h>
 
 static char *argv0;
 
@@ -44,6 +45,7 @@ void
 finfo(const char *p)
 {
 	struct stat st;
+	struct group *grp;
 	struct passwd *pwu;
 	int e, a;
 	char *gs, *us;
@@ -70,8 +72,9 @@ finfo(const char *p)
 	c = gettypechar(&st) ;
 	a =  0777 & st.st_mode ;
 	pwu = getpwuid(st.st_uid) ;
-	printf("%s\t%c\t%04o\t%s\t%u\n",
-		p, c, a, pwu->pw_name, st.st_size);
+	grp = getgrgid(st.st_gid) ;
+	printf("%s\t%c\t%04o\t%u\t%s\t%s\n",
+		p, c, a, st.st_size, pwu->pw_name, grp->gr_name);
 }
 
 int
